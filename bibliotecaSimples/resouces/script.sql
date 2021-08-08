@@ -12,3 +12,7 @@ create table pessoas(
 id int not null auto_increment primary key,
 nome varchar(30)
 )default charset = utf8;
+
+alter table pessoas add column livro_emprestado int;
+
+alter table pessoas add foreign key (livro_emprestado) references livros(id);
